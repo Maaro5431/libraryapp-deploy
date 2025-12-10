@@ -1,0 +1,96 @@
+@model IEnumerable<LibraryApp.Models.Book>
+@{
+    ViewData["Title"] = "My Library";
+}
+
+<div class="container my-5">
+    <div class="row mb-4">
+        <div class="col">
+            <h1 class="display-5 text-primary fw-bold">My Books</h1>
+            <p class="lead">Real-time library — add a book and watch it appear instantly!</p>
+            <a asp-action="Create" class="btn btn-success btn-lg shadow">
+                Add New Book
+            </a>
+        </div>
+    </div>
+
+    <!-- Success message after adding a book -->
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show">
+            <strong>Success!</strong> @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info p-5 text-center">
+            <h3>No books yet</h3>
+            <p>Be the first to <a asp-action="Create">add a book</a>!</p>
+        </div>
+    }
+    else
+    {
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var book in Model)
+            {
+                <div class="col">
+                    <div class="card h-100 shadow-sm hover-shadow border-0">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-primary">@book.Title</h5>
+                            <p class="card-text">
+                                <strong>Author:</strong> @book.Author<br />
+                                <strong>Year:</strong> @book.Year
+                            </p>
+                            <small class="text-muted">ID: @book.Id</small>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+<!-- REAL-TIME NOTIFICATION WHEN ANY USER ADDS A BOOK (PS11) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+<script>
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/bookHub")
+        .withAutomaticReconnect()
+        .build();
+
+    connection.on("BookAdded", function () {
+        // Beautiful toast notification
+        const toast = document.createElement("div");
+        toast.className = "alert alert-info alert-dismissible fade show position-fixed";
+        toast.style.top = "20px";
+        toast.style.right = "20px";
+        toast.style.zIndex = "9999";
+        toast.style.minWidth = "300px";
+        toast.innerHTML = `
+            <strong>New Book Added!</strong><br>
+            Someone just added a book to the library!
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        `;
+        document.body.appendChild(toast);
+
+        // Auto-remove after 5 seconds
+        setTimeout(() => toast.remove(), 5000);
+
+        // Optional: refresh the list silently
+        setTimeout(() => location.reload(), 1000);
+    });
+
+    connection.start().catch(err => console.error("SignalR Error:", err));
+</script>
+
+<style>
+    .hover-shadow {
+        transition: all 0.3s ease;
+    }
+    .hover-shadow:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+    }
+</style>

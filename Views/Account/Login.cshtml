@@ -1,0 +1,11 @@
+<h2>Login</h2>
+@if (ViewBag.Error != null) 
+{ 
+    <div class="alert alert-danger">@ViewBag.Error</div> 
+}
+<form method="post" asp-antiforgery="true">
+    <input name="username" placeholder="Username" required /><br/>
+    <input name="password" type="password" placeholder="Password" required /><br/>
+    <button type="submit">Login</button>
+</form>
+<a asp-action="Logout">Logout</a>

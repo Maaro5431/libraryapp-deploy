@@ -1,0 +1,28 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+
+  @include tablet {
+    gap: 1rem;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card {
+  flex: 1 1 300px;
+  max-width: 380px;
+  border-radius: $border-radius;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  }
+}

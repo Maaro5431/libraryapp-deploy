@@ -1,0 +1,59 @@
+2025-12-10 09:42:29.833 +02:00 [INF] Entity Framework Core 6.0.35 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:6.0.35' with options: StoreName=LibraryDb 
+2025-12-10 09:42:30.051 +02:00 [INF] Saved 1 entities to in-memory store.
+2025-12-10 09:42:30.112 +02:00 [INF] Saved 1 entities to in-memory store.
+2025-12-10 09:42:30.153 +02:00 [INF] Saved 2 entities to in-memory store.
+2025-12-10 09:42:30.186 +02:00 [INF] User profile is available. Using 'C:\Users\AmmaarB\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-10 09:42:30.252 +02:00 [INF] Now listening on: http://localhost:5253
+2025-12-10 09:42:30.255 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-10 09:42:30.256 +02:00 [INF] Hosting environment: Development
+2025-12-10 09:42:30.256 +02:00 [INF] Content root path: C:\Users\AmmaarB\OneDrive - MiX Telematics\Documents\NetCampus\Practical Skills Learning Programme 7\PM-09_App\LibraryApp\
+2025-12-10 09:42:30.854 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5253/ - -
+2025-12-10 09:42:30.868 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-12-10 09:42:30.919 +02:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2025-12-10 09:42:30.926 +02:00 [INF] No cached response available for this request.
+2025-12-10 09:42:30.934 +02:00 [INF] Executing endpoint 'LibraryApp.Controllers.AccountController.Login (LibraryApp)'
+2025-12-10 09:42:30.946 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller LibraryApp.Controllers.AccountController (LibraryApp).
+2025-12-10 09:42:30.958 +02:00 [INF] Executing ViewResult, running view Login.
+2025-12-10 09:42:31.113 +02:00 [INF] Executed ViewResult - view Login executed in 158.0663ms.
+2025-12-10 09:42:31.115 +02:00 [INF] Executed action LibraryApp.Controllers.AccountController.Login (LibraryApp) in 167.4405ms
+2025-12-10 09:42:31.115 +02:00 [INF] Executed endpoint 'LibraryApp.Controllers.AccountController.Login (LibraryApp)'
+2025-12-10 09:42:31.115 +02:00 [INF] The response could not be cached for this request.
+2025-12-10 09:42:31.118 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5253/ - - - 200 - text/html;+charset=utf-8 268.2952ms
+2025-12-10 09:42:31.168 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5253/css/site.min.css - -
+2025-12-10 09:42:31.175 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5253/_framework/aspnetcore-browser-refresh.js - -
+2025-12-10 09:42:31.176 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5253/_framework/aspnetcore-browser-refresh.js - - - 200 12328 application/javascript;+charset=utf-8 1.6494ms
+2025-12-10 09:42:31.188 +02:00 [INF] The file /css/site.min.css was not modified
+2025-12-10 09:42:31.189 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5253/css/site.min.css - - - 304 - text/css 20.5706ms
+2025-12-10 09:42:33.818 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5253/ application/x-www-form-urlencoded 214
+2025-12-10 09:42:33.820 +02:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2025-12-10 09:42:33.820 +02:00 [INF] Executing endpoint 'LibraryApp.Controllers.AccountController.Login (LibraryApp)'
+2025-12-10 09:42:33.852 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller LibraryApp.Controllers.AccountController (LibraryApp).
+2025-12-10 09:42:33.946 +02:00 [INF] Entity Framework Core 6.0.35 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:6.0.35' with options: StoreName=LibraryDb 
+2025-12-10 09:42:34.122 +02:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-12-10 09:42:34.123 +02:00 [INF] Executing RedirectResult, redirecting to /Books/Index.
+2025-12-10 09:42:34.123 +02:00 [INF] Executed action LibraryApp.Controllers.AccountController.Login (LibraryApp) in 271.2831ms
+2025-12-10 09:42:34.124 +02:00 [INF] Executed endpoint 'LibraryApp.Controllers.AccountController.Login (LibraryApp)'
+2025-12-10 09:42:34.124 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5253/ application/x-www-form-urlencoded 214 - 302 0 - 306.3150ms
+2025-12-10 09:42:34.134 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5253/Books/Index - -
+2025-12-10 09:42:34.148 +02:00 [INF] No cached response available for this request.
+2025-12-10 09:42:34.149 +02:00 [INF] Executing endpoint 'LibraryApp.Controllers.BooksController.Index (LibraryApp)'
+2025-12-10 09:42:34.152 +02:00 [INF] Route matched with {action = "Index", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller LibraryApp.Controllers.BooksController (LibraryApp).
+2025-12-10 09:42:34.182 +02:00 [INF] Entity Framework Core 6.0.35 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:6.0.35' with options: StoreName=LibraryDb 
+2025-12-10 09:42:34.201 +02:00 [INF] Executing ViewResult, running view Index.
+2025-12-10 09:42:34.220 +02:00 [INF] Executed ViewResult - view Index executed in 22.0143ms.
+2025-12-10 09:42:34.221 +02:00 [INF] Executed action LibraryApp.Controllers.BooksController.Index (LibraryApp) in 68.7007ms
+2025-12-10 09:42:34.221 +02:00 [INF] Executed endpoint 'LibraryApp.Controllers.BooksController.Index (LibraryApp)'
+2025-12-10 09:42:34.221 +02:00 [INF] The response has been cached.
+2025-12-10 09:42:34.222 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5253/Books/Index - - - 200 - text/html;+charset=utf-8 87.6435ms
+2025-12-10 09:42:34.278 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5253/_framework/aspnetcore-browser-refresh.js - -
+2025-12-10 09:42:34.279 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5253/_framework/aspnetcore-browser-refresh.js - - - 200 12328 application/javascript;+charset=utf-8 0.6860ms
+2025-12-10 09:42:34.319 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5253/bookHub/negotiate?negotiateVersion=1 - 0
+2025-12-10 09:42:34.322 +02:00 [INF] Executing endpoint '/bookHub/negotiate'
+2025-12-10 09:42:34.346 +02:00 [INF] Executed endpoint '/bookHub/negotiate'
+2025-12-10 09:42:34.346 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5253/bookHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 26.8402ms
+2025-12-10 09:42:34.365 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5253/bookHub?id=ovFdWoGaUOf9LMgHuTa3Zg - -
+2025-12-10 09:42:34.380 +02:00 [INF] Executing endpoint '/bookHub'
+2025-12-10 09:42:36.649 +02:00 [INF] Executed endpoint '/bookHub'
+2025-12-10 09:42:36.650 +02:00 [INF] The response could not be cached for this request.
+2025-12-10 09:42:36.652 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5253/bookHub?id=ovFdWoGaUOf9LMgHuTa3Zg - - - 101 - - 2287.4061ms
+2025-12-10 09:42:41.285 +02:00 [INF] Application is shutting down...

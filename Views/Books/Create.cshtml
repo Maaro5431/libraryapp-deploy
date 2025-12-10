@@ -1,0 +1,35 @@
+@model LibraryApp.Models.Book
+@{
+    ViewData["Title"] = "Add New Book";
+}
+
+<h2 class="mb-4 text-primary">Add New Book</h2>
+
+<form asp-action="Create" method="post">
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label asp-for="Title" class="form-label"></label>
+            <input asp-for="Title" class="form-control form-control-lg" required />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Author" class="form-label"></label>
+            <input asp-for="Author" class="form-control form-control-lg" required />
+            <span asp-validation-for="Author" class="text-danger"></span>
+        </div>
+
+        <div class="col-12">
+            <label asp-for="Year" class="form-label"></label>
+            <input asp-for="Year" class="form-control form-control-lg" type="number" min="1500" max="2025" required />
+            <span asp-validation-for="Year" class="text-danger"></span>
+        </div>
+
+        <div class="col-12 mt-4">
+            <button type="submit" class="btn btn-primary btn-lg me-3">Save Book</button>
+            <a asp-action="Index" class="btn btn-secondary btn-lg">Cancel</a>
+        </div>
+    </div>
+</form>
+
+<!-- Success toast – moved to Index.cshtml (cleaner) -->
